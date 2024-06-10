@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BigSchool.Models.Ghe>
+
+@{
+    ViewBag.Title = "IndexGhe";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexGhe</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Gheso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maphong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phongso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giaghe)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gheso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maphong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phongso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giaghe)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditGhe", new { id=item.Maghe }) |
+            @Html.ActionLink("Details", "DetailsGhe", new { id=item.Maghe }) |
+            @Html.ActionLink("Delete", "DeleteGhe", new { id=item.Maghe })
+        </td>
+    </tr>
+}
+
+</table>

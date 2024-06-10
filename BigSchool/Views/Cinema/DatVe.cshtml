@@ -1,0 +1,107 @@
+﻿@model IEnumerable<BigSchool.Models.P_VeResult>
+
+@{
+    ViewBag.Title = "DatVe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DatVe</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maphim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maghe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaychieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phongso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gheso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thoiluong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maphong)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maphim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maghe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenphim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giochieu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaychieu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phongso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gheso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thoiluong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maphong)
+            </td>
+            <td>
+                <form  action="~/Cinema/ThanhToan">
+                    <input type="hidden" id="makh" name="makh" value="@item.MaKH" />
+                    <input type="hidden" id="tenphim" name="tenphim" value="@item.Tenphim" />
+                    <input type="hidden" id="gia" name="gia" value="@item.Gia" />
+                    <input type="submit" value="Thanh Toan" />
+                </form>
+            </td>
+        </tr>
+    }
+
+</table>

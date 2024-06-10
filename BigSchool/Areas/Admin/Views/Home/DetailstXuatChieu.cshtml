@@ -1,0 +1,35 @@
+﻿@model BigSchool.Models.Xuat_Chieu
+
+@{
+    ViewBag.Title = "DetailstXuatChieu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailstXuatChieu</h2>
+
+<div>
+    <h4>Xuat_Chieu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giochieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaXC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaXC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaXC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

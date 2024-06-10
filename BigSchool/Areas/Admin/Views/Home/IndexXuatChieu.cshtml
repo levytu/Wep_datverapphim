@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BigSchool.Models.Xuat_Chieu>
+
+@{
+    ViewBag.Title = "IndexXuatChieu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexXuatChieu</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaXC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giochieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaXC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaXC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaXC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaXC })
+        </td>
+    </tr>
+}
+
+</table>

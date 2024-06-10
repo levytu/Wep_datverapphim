@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link href="~/Content/Style06.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <div class="nav-wrapper">
+            <div class="container">
+                <div class="nav">
+                    <a href="#" class="logo">
+                        <i class='bx bx-movie-play bx-tada main-color'></i><span class="main-color">C</span><span class="main-color">G</span><span class="main-color">V</span>
+                    </a>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href='@Url.Action("Index","Home")'>Trang Chủ</a></li>
+                        <li><a href='@Url.Action("LichChieu","Home")'>Lịch chiếu</a></li>
+                        <li><a href='@Url.Action("CreateVE","Cinema")'>Mua vé</a></li>
+                        <li><a href='@Url.Action("Hotro","Home")'>Hỗ trợ</a></li>
+                        <li><a href='@Url.Action("Hotro","Home")'>Ưu Đãi</a></li>
+                        <li>
+                            @Html.Partial("_LoginPartial")
+                        </li>
+                    </ul>
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <div class="hamburger"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <nav>
+        <div>
+            @RenderBody()
+        </div>
+    </nav>
+    <footer>
+        <ul class="ul_1">
+
+            <li>Copyright © 2021 - 2022 KhềuChuyênNghiệp.com.vn</li>
+            <li>Giấy ĐKKD số 0104630479 do Sở KHĐT TP HCM cấp lần đầu ngày 02/06/2010</li>
+            <li>Giấy phép ICP số 2399/GP-STTTT do Sở TTTT HCM cấp ngày 4/9/2014</li>
+            <li>Giấy phép GH ICP số 3832/GP-TTĐT do Sở TTTT HCM cấp ngày 8/8/2019</li>
+            <li>Giấy phép SĐ, BS GP ICP số 3833/GP-TTĐT do Sở TTTT HCM cấp ngày 8/8/2019</li>
+        </ul>
+        <div class="ul_2">
+            <p>Kết nối với chúng tôi:</p>
+
+            <a href="https://www.facebook.com/levytu1405"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="https://www.youtube.com/channel/UCJfEjYIofMWxIBODg-uHsyw/featured"><i class="fa-brands fa-youtube"></i>Youtube</a>
+            <a href=""><i class="fa-brands fa-instagram-square"></i>Instagram</a>
+            <p>Chi nhánh: TP.Hồ Chí Minh, 741/50 Nguyễn Văn A</p>
+            <p>Hotline :0987465465</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+
+
+    <script src="~/Scripts/JavaScript01.js"></script>
+
+  
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

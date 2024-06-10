@@ -1,0 +1,129 @@
+﻿@model BigSchool.Models.Phim
+
+@{
+    ViewBag.Title = "DeletePhim";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DeletePhim</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Phim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoiluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoiluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaykhoichieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaykhoichieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Daodien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Daodien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Namsx)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Namsx)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matheloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matheloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Theloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Theloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apphich)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apphich)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loaiphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loaiphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaLP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaLP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trailer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trailer)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "IndexPhim")
+        </div>
+    }
+</div>

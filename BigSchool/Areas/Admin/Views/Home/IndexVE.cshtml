@@ -1,0 +1,100 @@
+﻿@model IEnumerable<BigSchool.Models.VE>
+
+@{
+    ViewBag.Title = "IndexVE";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexVE</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maphim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maghe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaychieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phongso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gheso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thoiluong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maphong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maphim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maghe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenphim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giochieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaychieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phongso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gheso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thoiluong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maphong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditVE", new { id=item.Mave }) |
+            @Html.ActionLink("Details", "DetailsVE", new { id=item.Mave }) |
+            @Html.ActionLink("Delete", "DeleteVE", new { id=item.Mave })
+        </td>
+    </tr>
+}
+
+</table>

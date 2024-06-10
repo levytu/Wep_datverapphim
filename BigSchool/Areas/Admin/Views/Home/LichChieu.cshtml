@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BigSchool.Models.Lich_Chieu>
+
+@{
+    ViewBag.Title = "LichChieu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LichChieu</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaXC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaychieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaXC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaXC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaychieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giochieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trangthai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaXC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditLichChieu", new { id=item.MaLC }) |
+            @Html.ActionLink("Details", "DetailsLichChieu", new { id=item.MaLC }) |
+            @Html.ActionLink("Delete", "DeleteLichChieu", new { id=item.MaLC })
+        </td>
+    </tr>
+}
+
+</table>

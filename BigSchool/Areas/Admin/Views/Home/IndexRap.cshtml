@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BigSchool.Models.Rap_phim>
+
+@{
+    ViewBag.Title = "IndexRap";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexRap</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tenrap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diachi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenrap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diachi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditRap", new { id=item.Marap }) |
+            @Html.ActionLink("Details", "DetailsRap", new { id=item.Marap }) |
+            @Html.ActionLink("Delete", "DeleteRap", new { id=item.Marap })
+        </td>
+    </tr>
+}
+
+</table>

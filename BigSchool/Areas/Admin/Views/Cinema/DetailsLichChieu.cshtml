@@ -1,0 +1,59 @@
+﻿@model BigSchool.Models.Lich_Chieu
+
+@{
+    ViewBag.Title = "DetailsLichChieu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsLichChieu</h2>
+
+<div>
+    <h4>Lich_Chieu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaychieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaychieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giochieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenphim)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaLC }) |
+    @Html.ActionLink("Back to List", "IndexLichChieu")
+</p>

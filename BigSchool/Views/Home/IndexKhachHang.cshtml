@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BigSchool.Models.Khach_Hang>
+
+@{
+    ViewBag.Title = "IndexKhachHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "CreateKhachHang")
+</p>
+<main>
+    <div class="page-section features" style="margin:50px 0px"></div>
+    <h4 style="color:white;text-align:center;font-size:30px">Thông tin khách hàng</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Họ Tên:
+               @* @Html.DisplayNameFor(model => model.Hoten)*@
+            </th>
+            <th>
+                Ngày sinh:
+               @* @Html.DisplayNameFor(model => model.Ngaysinh)*@
+            </th>
+            <th>
+                Địa chỉ:
+                @*@Html.DisplayNameFor(model => model.Diachi)*@
+            </th>
+            <th>
+                Email:
+               @* @Html.DisplayNameFor(model => model.Email)*@
+            </th>
+            <th>
+                SDT:
+              @*  @Html.DisplayNameFor(model => model.SDT)*@
+            </th>
+            <th>
+                CMND:
+                @*@Html.DisplayNameFor(model => model.CMND)*@
+            </th>
+            <th>
+                Điểm tích lũy:
+   @*             @Html.DisplayNameFor(model => model.Diemtichluy)*@
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hoten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngaysinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Diachi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CMND)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Diemtichluy)
+                </td>
+                <td>
+                   @* @Html.ActionLink("Edit", "EditKhachHang", new { id = item.MaKH }) |*@
+                    @Html.ActionLink("Details", "DetailsKhachHang", new { id = item.MaKH }) |
+                    @*  @Html.ActionLink("Delete", "DeleteKhachHang", new { id=item.MaKH })*@
+                </td>
+            </tr>
+        }
+
+    </table>
+    </main>

@@ -1,0 +1,35 @@
+﻿@model BigSchool.Models.Rap_phim
+
+@{
+    ViewBag.Title = "DetailsRap";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsRap</h2>
+
+<div>
+    <h4>Rap_phim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenrap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenrap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diachi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Marap }) |
+    @Html.ActionLink("Back to List", "IndexRap")
+</p>

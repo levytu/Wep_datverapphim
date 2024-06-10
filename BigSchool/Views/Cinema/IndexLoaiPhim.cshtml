@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BigSchool.Models.Loai_Phim>
+
+@{
+    ViewBag.Title = "IndexLoaiPhim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexLoaiPhim</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateLoaiPhim")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Loaiphim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaLP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loaiphim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaLP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditLoaiPhim", new { id=item.MaLP }) |
+            @Html.ActionLink("Details", "DetailsLoaiPhim", new { id=item.MaLP }) |
+            @Html.ActionLink("Delete", "DeleteLoaiPhim", new { id=item.MaLP })
+        </td>
+    </tr>
+}
+
+</table>

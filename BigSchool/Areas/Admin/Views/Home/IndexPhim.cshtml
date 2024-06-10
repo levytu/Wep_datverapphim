@@ -1,0 +1,111 @@
+﻿@model IEnumerable<BigSchool.Models.Phim>
+
+@{
+    ViewBag.Title = "IndexPhim";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexPhim</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreatePhim")
+</p>
+<main>
+    <div class="page-section features" style="margin:50px 0px"></div>
+    <h4 style="color:white;text-align:center;font-size:30px">Thông tin khách hàng</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tenphim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mota)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoiluong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ngaykhoichieu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Daodien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Namsx)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matheloai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Theloai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apphich)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Loaiphim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaLP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trailer)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tenphim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mota)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoiluong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngaykhoichieu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Daodien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Namsx)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Matheloai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Theloai)
+                </td>
+                <td>
+                    <img src="~/Content/img/@item.Apphich" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Loaiphim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaLP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trailer)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditPhim", new { id = item.Maphim }) |
+                    @Html.ActionLink("Details", "DetailsPhim", new { id = item.Maphim }) |
+                    @Html.ActionLink("Delete", "DeletePhim", new { id = item.Maphim })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </main>

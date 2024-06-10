@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "ThanhToan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+<p>
+    @{
+        int makh = int.Parse(Request.QueryString["makh"]);
+        string tenphim = Request.QueryString["tenphim"];
+        string gia = Request.QueryString["gia"];
+    }
+</p>
+<div class="xacnhan" style="margin-top:42px">
+<div>
+    <input type="hidden" id="MaKH" name="MaKH" value="@makh" />
+</div>
+<div>
+    <label style="color:white" for="@tenphim">Phim Đã chọn:</label>
+    <input  style="color:black" type="text" id="tenphim" name="tenphim" value="@tenphim" readonly />
+</div>
+<div>
+    <label style="color:white" for="@gia">Giá:</label>
+    <input style="color:black" type="text" id="gia" name="gia" value="@gia" readonly />
+</div>
+<div>
+    <input type="submit" value="Xac Nhan" />
+   
+</div>
+    </div>
+}
+

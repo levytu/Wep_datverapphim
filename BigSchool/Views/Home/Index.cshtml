@@ -1,0 +1,191 @@
+﻿@model IEnumerable<BigSchool.Models.Phim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Style06.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <p>
+
+    </p>
+
+
+    <div class="hero-section">
+
+        <div class="hero-slide">
+            <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+
+                <div class="hero-slide-item">
+                    <img src="~/Content/img/black-banner.png" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                <h1> Black Panther</h1>
+                                <p>Chiến Binh Báo Đen</p>
+                                <p>Khởi chiếu: 23/2/2018</p>
+                            </div>
+
+                            <div class="item-action">
+                                <a href="" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Mua vé</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide-item">
+                    <img src="~/Content/img/supergirl-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                <h1> Super Girl</h1>
+                                <p>Nữ Siêu Nhân</p>
+                                <p>Khởi chiếu: 23/2/2021</p>
+                            </div>
+
+                            <div class="item-action">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Mua vé</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide-item">
+                    <img src="~/Content/img/wanda-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                <h1> WandaVision</h1>
+                                <p>Wanda và Vision</p>
+                                <p>Khởi chiếu: 23/2/2021</p>
+                            </div>
+
+                            <div class="item-action">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Mua vé</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide-item">
+                    <img src="~/Content/img/transformer-banner.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="hero-slide-item-content">
+                        <div class="item-content-wraper">
+                            <div class="item-content-title top-down">
+                                <h1> Transformers: The Last Knight</h1>
+                                <p>Transformers: Chiến binh cuối cùng</p>
+                                <p>Khởi chiếu: 23/2/2020</p>
+                            </div>
+
+                            <div class="item-action">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Mua vé</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide-item">
+                    <img src="~/Content/img/quangcao.jpg" alt="" height="600">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="top-movies-slide">
+        <div class="owl-carousel" id="top-movies-slide">
+
+            <!-- MOVIE ITEM -->
+            <div class="movie-item">
+                <img src="~/Content/img/khuyen.jpg" alt="">
+
+            </div>
+
+            <div class="movie-item">
+                <img src="~/Content/img/777.jpg" alt="">
+
+            </div>
+            <div class="movie-item">
+                <img src="~/Content/img/888.png" alt="">
+
+            </div>
+            <div class="movie-item">
+                <img src="~/Content/img/555.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                Khởi chiếu
+            </div>
+
+            <div class="movies-slide carousel-nav-center owl-carousel">
+
+                @foreach (var item in Model)
+                {
+                    <div class="btn2">
+                        <a href="#" class="movie-item">
+
+                            <img src="~/Content/img/@item.Apphich" />
+                            <div class="movie-item-content">
+                                <div class="movie-item-title">
+                                    @Html.DisplayFor(modelItem => item.Tenphim)
+                                </div>
+
+
+                            </div>
+
+                        </a>
+
+
+
+
+                        <ul class="nav-menu1" style="list-style:none; color:teal">
+                            <li>
+
+                                @*  @Html.ActionLink("Edit", "EditPhim", new { id = item.Maphim })*@
+                                @Html.ActionLink("Xem Chi tiết", "DetailsPhim", new { id = item.Maphim })
+                                @*     @Html.ActionLink("Delete", "DeletePhim", new { id = item.Maphim })*@
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

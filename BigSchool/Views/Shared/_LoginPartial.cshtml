@@ -1,0 +1,36 @@
+﻿<!DOCTYPE
+<html>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    @using Microsoft.AspNet.Identity
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+
+                    <ul>
+                        <a href='@Url.Action("IndexKhachHang","Home")' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<span class="caret"></span></a>
+
+                        <li class="sub_menu"><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
+                    </ul>
+                </li>
+            </ul>
+        }
+    }
+    else
+    {
+        <ul class="nav navbar-nav navbar-right">
+            <li>@Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+
+            <li>@Html.ActionLink("Đăng Nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    }
+
+</body>
+</html>

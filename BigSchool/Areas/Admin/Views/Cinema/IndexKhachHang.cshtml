@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BigSchool.Models.Khach_Hang>
+
+@{
+    ViewBag.Title = "IndexKhachHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexKhachHang</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateKhachHang")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaysinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diemtichluy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngaysinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diachi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CMND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diemtichluy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditKhachHang", new { id=item.MaKH }) |
+            @Html.ActionLink("Details", "DetailsKhachHang", new { id=item.MaKH }) |
+            @Html.ActionLink("Delete", "DeleteKhachHang", new { id=item.MaKH })
+        </td>
+    </tr>
+}
+
+</table>

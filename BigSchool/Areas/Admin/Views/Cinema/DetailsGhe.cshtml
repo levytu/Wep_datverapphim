@@ -1,0 +1,35 @@
+﻿@model BigSchool.Models.Ghe
+
+@{
+    ViewBag.Title = "DetailsGhe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsGhe</h2>
+
+<div>
+    <h4>Ghe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gheso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gheso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maphong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Maghe }) |
+    @Html.ActionLink("Back to List", "IndexGhe")
+</p>

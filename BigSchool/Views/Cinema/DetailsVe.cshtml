@@ -1,0 +1,107 @@
+﻿@model BigSchool.Models.VE
+
+@{
+    ViewBag.Title = "DetailsVe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsVe</h2>
+
+<div>
+    <h4>VE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maghe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maghe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giochieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giochieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaychieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaychieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phongso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phongso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gheso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gheso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoiluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoiluong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Mave }) |
+    @Html.ActionLink("Back to List", "IndexVE")
+</p>

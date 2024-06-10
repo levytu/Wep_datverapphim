@@ -1,0 +1,91 @@
+﻿@model BigSchool.Models.Phim
+
+@{
+    ViewBag.Title = "DetailsPhim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsPhim</h2>
+
+<div>
+    <h4>Phim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenphim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenphim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoiluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoiluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaykhoichieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaykhoichieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Daodien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Daodien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Namsx)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Namsx)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matheloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matheloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Theloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Theloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apphich)
+        </dt>
+
+        <dd>
+            <img src="~/Content/img/@Url.Content(Model.Apphich)" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Maphim }) |
+    @Html.ActionLink("Back to List", "IndexKhachHang")
+</p>
